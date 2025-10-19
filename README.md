@@ -1,11 +1,11 @@
-# Testes de Penetração com Kali Linux e Metasploitable
+# Testes de Penetração com Kali Linux e Metasploitable + Desafio Ransomware e Keylogger
 
 Este repositório documenta os testes realizados em um ambiente controlado de **pentest**, utilizando **Kali Linux** como sistema atacante e **Metasploitable 2** como máquina alvo. Todos os experimentos foram feitos em laboratório virtual isolado, apenas para fins de estudo.
 
 ---
 
 ## 🎯 Objetivo
-Explorar vulnerabilidades conhecidas em serviços da Metasploitable, praticando técnicas de **força bruta**, **password spraying** e **automação de login**, utilizando a ferramenta **Medusa** para ataques com *Wordlists*.
+Explorar vulnerabilidades conhecidas em serviços da Metasploitable, praticando técnicas de **força bruta**, **password spraying** e **automação de login**, utilizando a ferramenta **Medusa** para ataques com *Wordlists* e utilizando scripts desenvolvidos para *Ransomware* e *Keylogger* educativos.
 
 ---
 
@@ -15,7 +15,7 @@ Explorar vulnerabilidades conhecidas em serviços da Metasploitable, praticando 
 |-------------|------------|
 | Kali Linux | Sistema atacante, versão 2025.1 |
 | Metasploitable 2 | Sistema alvo vulnerável |
-| Ferramenta usada | Medusa (modular brute force tool) |
+| Ferramenta usada | Medusa (modular brute force tool), Python (Ransomware/Keylogger) |
 | Rede | Host-Only / Local Virtual Network |
 
 ---
@@ -23,7 +23,8 @@ Explorar vulnerabilidades conhecidas em serviços da Metasploitable, praticando 
 ## 🔧 Ferramentas Utilizadas
 
 - **Medusa** — Ataques de força bruta a serviços (FTP, SMB, HTTP, etc.)  
-- **DVWA (Damn Vulnerable Web Application)** — Testes automatizados em formulário web  
+- **DVWA (Damn Vulnerable Web Application)** — Testes automatizados em formulário web
+- **Python** — Desenvolvimento dos scripts educativos de Ransomware e Keylogger 
 - **Wordlists** — Dicionários de senhas padrão usados para ataques (por exemplo: `/usr/share/wordlists/rockyou.txt`)  
 
 ---
@@ -77,11 +78,45 @@ medusa -h 192.168.56.101 -U usuarios.txt -p 123456 -M smbnt
 
 ---
 
+### 4. **Desafio Ransomware – Teste Controlado**
+Script desenvolvido em Python para estudar o funcionamento básico da criptografia de arquivos em ambiente de laboratório.
+O código foi aplicado em uma pasta de testes, simulando o comportamento de criptografia e descriptografia controladas.
+
+# Pseudoexemplo educativo (simplificado):
+ - Encripta arquivos de teste e gera chave simétrica
+ - Uso apenas em ambiente local e controlado
+python3 ransomware_simulado.py
+
+**Descrição:**
+- O estudo abordou conceitos como:
+- Geração de chaves AES;
+- Criptografia simétrica em lote;
+- Controle de diretórios e logs de execução;
+- Reversão segura com chave armazenada localmente.
+
+---
+
+### 5. **Desafio Keylogger – Captura Local de Teclas**
+- Pseudoexemplo educativo (simplificado)
+- Registra entradas do teclado em um arquivo local
+python3 keylogger_simulado.py
+
+**Descrição:**
+- O exercício permitiu entender:
+- Uso do módulo pynput para captura de teclas;
+- Armazenamento local com controle de logs;
+- Limitação do monitoramento ao contexto do laboratório;
+- Boas práticas de auditoria e descarte seguro de dados.
+
+---
+
 ## 📊 Resultados e Conclusões
 
 - O serviço **FTP** aceitava credenciais padrão, mostrando falha de segurança crítica.  
 - O **DVWA** demonstrou vulnerabilidade a ataques automatizados, indicando necessidade de CAPTCHA ou políticas de bloqueio.  
 - O serviço **SMB** respondeu positivamente a *password spraying*, reforçando a importância de senhas complexas e gerenciamento de tentativas.
+- O **Ransomware** simulado validou conceitos de criptografia e restauração segura.
+- O **Keylogger** educativo reforçou a importância de políticas de segurança de endpoint.
 
 ---
 
@@ -95,7 +130,8 @@ Jamais utilize estas técnicas em sistemas sem autorização expressa do proprie
 
 ## 📚 Créditos
 
-- **Ferramenta:** Medusa – Modular Brute Forcer  
+- **Ferramenta:** Medusa – Modular Brute Forcer
+- **Linguagem:** Python 3 – para scripts de simulação
 - **Alvo:** Metasploitable 2 by Rapid7  
 - **Ambiente:** Kali Linux Offensive Security
 - **DIO:** Santander Bootcamp Cibersegurança 2025
