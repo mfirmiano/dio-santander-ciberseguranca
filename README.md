@@ -1,4 +1,4 @@
-# Atualização para inclusão na Atividade 4, módulo 1 do Hackers do Bem - Especializado: Blue Team 🛡️
+# Atualização para inclusão na Atividade 4, módulo 1 do Hackers do Bem - Especializado: Blue Team 🛡️🛡️
 
 # Testes de Penetração com Kali Linux e Metasploitable + Desafio Ransomware e Keylogger
 
