@@ -1,3 +1,5 @@
+# Atualização para inclusão na Atividade 4, módulo 1 do Hackers do Bem - Especializado: Blue Team 🛡️
+
 # Testes de Penetração com Kali Linux e Metasploitable + Desafio Ransomware e Keylogger
 
 Este repositório documenta os testes realizados em um ambiente controlado de **pentest**, utilizando **Kali Linux** como sistema atacante e **Metasploitable 2** como máquina alvo. Todos os experimentos foram feitos em laboratório virtual isolado, apenas para fins de estudo.
